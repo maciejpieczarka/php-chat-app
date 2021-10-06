@@ -1,0 +1,114 @@
+.chat-area {
+
+    header {
+        display: flex;
+        align-items: center;
+        padding: 1.8rem 3rem;
+    }
+
+    header img {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        margin: 0 1.5rem;
+    }
+
+    header .back-icon {
+        font-size: 1.8rem;
+        color: #333;
+    }
+
+    header span {
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
+}
+
+.chat-box {
+    overflow-y: auto;
+    height: 50rem;
+    background-color: #f7f7f7;
+    padding: 1rem 3rem 2rem 3rem;
+    box-shadow: inset 0 3.2rem 3.2rem -3.2rem rgba(0, 0, 0, .05rem),
+                inset 0 -3.2rem 3.2rem -3.2rem rgba(0, 0, 0, .05rem);
+
+    .chat {
+        margin: 1.5rem 0;
+    }
+
+    .chat p {
+        word-wrap: break-word;
+        padding: .8rem 1.6rem;
+        box-shadow: 0 0 3.2rem rgba(0, 0, 0, .08rem),
+                    0 1.6rem 1.6rem -1.6rem rgba(0, 0, 0, .1rem);
+    }
+    
+    .outgoing, .incoming {
+        display: flex;
+    }
+
+    .outgoing .details {
+        margin-left: auto;
+        max-width: calc(100% - 13rem);
+    }
+
+    .outgoing .details p {
+        background-color: #333;
+        color: #fff;
+        border-radius: 1.8rem 1.8rem 0 1.8rem;
+    }
+
+    .incoming {
+        align-items: flex-end;
+    }
+
+    .incoming img {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+    }
+
+    .incoming .details {
+        margin-left: 1rem;
+        margin-right: auto;
+        max-width: calc(100% - 130px);
+    }
+
+    .incoming .details p{
+        background-color: #fff;
+        color: #333;
+        border-radius: 1.8rem 1.8rem 1.8rem 0;
+    }
+    
+}
+
+.typing-area {
+    padding: 1.8rem 3rem;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+        height: 4.5rem;
+        width: calc(100% - 58px);
+        font-size: 1.7rem;
+        border: 1px solid #ccc;
+        padding: 0 1.3rem;
+        border-radius: .5rem 0 0 .5rem;
+        outline: none;
+    }
+
+    button {
+        width: 5.5rem;
+        background-color: #333;
+        color: #fff;
+        font-size: 1.9rem;
+        border: none;
+        outline: none;
+        border-radius: 0 .5rem .5rem 0;
+        cursor: pointer;
+    }
+}
+
+:is(.chat-box)::-webkit-scrollbar {
+    width: 0;
+}

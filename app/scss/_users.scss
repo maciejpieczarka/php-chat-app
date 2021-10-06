@@ -1,0 +1,120 @@
+//* Users section styles
+
+.users {
+
+    padding: 2.5rem 3rem;
+
+    header,
+    .users-list a {
+        display: flex;
+        align-items: center;
+        padding-bottom: 2rem;
+        justify-content: space-between;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    header .content img {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+    }
+
+    header .logout {
+        color: #fff;
+        font-size: 1.7rem;
+        padding: .7rem 1.5rem;
+        background-color: #333;
+        border-radius: .5rem;
+    }
+
+    .search {
+        position: relative;
+        margin: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .search .text {
+        font-size: 1.8rem;
+    }
+
+    .search input {
+        position: absolute;
+        height: 4.2rem;
+        width: calc(100% - 50px);
+        border: 1px solid #ccc;
+        padding: 0 1.3rem;
+        font-size: 1.6rem;
+        border-radius: .5rem 0 0 .5rem;
+    }
+
+    .search button {
+        font-size: 1.7rem;
+        width: 4.7rem;
+        height: 4.2rem;
+        border: none;
+        outline: none;
+        color: #fff;
+        background-color: #333;
+        border-radius: 0 .5rem .5rem 0;
+        cursor: pointer;
+    }
+
+    .users-list {
+        max-height: 35rem;
+        overflow-y: auto;
+    }
+
+    .users-list::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .users-list a {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        padding-right: 1.5rem;
+        border-bottom-color: #f1f1f1;
+    }
+
+    .users-list a:last-child {
+        border: none;
+        margin-bottom: 0;
+    }
+
+    .users-list a .content p {
+        color: #67676a;
+    }
+
+    .users-list a .content img {
+        border-radius: 50%;
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .users-list a .status-dot {
+        font-size: 1.2rem;
+        color: #468669;
+    }
+
+    //! Offline Status
+    .users-list a .status-dot.offline {
+        color: #ccc;
+    }
+    
+}
+
+:is(.users, .users-list) .content {
+    display: flex;
+    align-items: center;
+}
+
+:is(.users, .users-list) .details {
+    color: #000;
+    margin-left: 1.5rem;
+}
+
+:is(.users, .users-list) .details span {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
