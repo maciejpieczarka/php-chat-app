@@ -57,6 +57,12 @@
         cursor: pointer;
     }
 
+    form .field i.active::before {
+        content: '\f070';
+        color: #333;
+
+    }
+
     form .input input {
         height: 4rem;
         width: 100%;
