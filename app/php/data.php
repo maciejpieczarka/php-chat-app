@@ -20,10 +20,18 @@
             $msg = $result;
         }
 
+        //! Add you: text before message if sent by current user
         if($outgoing_id == @$row2['outgoing_msg_id'] ) {
             $you = "You: ";
         } else {
             $you = "";
+        }
+
+        //! Check if user is online or not
+        if($row['status'] == "Offline now") {
+            $status = "offline";
+        } else {
+            $status = "";
         }
 
         $output .= '<a href="chat.php?user_id='.$row['unique_id'].'">
@@ -34,7 +42,7 @@
                                 <p>'.$you.$msg.'</p>
                             </div>
                         </div>
-                        <div class="status-dot"><i class="fas fa-circle"></i></div>
+                        <div class="status-dot '.$status.'"><i class="fas fa-circle"></i></div>
                     </a>';
     }
 ?>
