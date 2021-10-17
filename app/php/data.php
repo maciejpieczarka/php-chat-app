@@ -29,7 +29,7 @@
 
         //! Check if user is online or not
         if($row['status'] == "Offline now") {
-            $status = "offline";
+            $status = "Offline";
         } else {
             $status = "";
         }
