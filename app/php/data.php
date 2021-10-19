@@ -1,5 +1,6 @@
 <?php
     while($row = mysqli_fetch_assoc($sql)) {
+        //! Select all messages sent between these two users
         $sql2 = mysqli_query($conn, "SELECT * FROM messages 
                                     WHERE (incoming_msg_id = {$row['unique_id']} 
                                     OR outgoing_msg_id = {$row['unique_id']})
@@ -20,7 +21,7 @@
             $msg = $result;
         }
 
-        //! Add you: text before message if sent by current user
+        //! Add 'you:' text before message if sent by current user
         if($outgoing_id == @$row2['outgoing_msg_id'] ) {
             $you = "You: ";
         } else {

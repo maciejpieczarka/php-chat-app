@@ -1,0 +1,2 @@
+/app/php/images/*.*
+!/app/php/images/.gitkeep
