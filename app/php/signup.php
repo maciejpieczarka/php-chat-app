@@ -27,6 +27,7 @@
                             $status = "Active now";
                             $randomId = rand(time(), 10000000);
 
+                            $password = sha1($password); //Password encryption
                             $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, firstName, lastName, email, password, img, status) VALUES ({$randomId}, '{$firstName}', '{$lastName}', '{$email}', '{$password}', '{$newImgName}', '{$status}')");
 
                             if($sql2) {
