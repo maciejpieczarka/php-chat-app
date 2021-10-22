@@ -1,7 +1,11 @@
 ## Table of contents
+* [Live Preview](#live-preview)
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+
+## Live Preview
+https://php-chat-maciejpieczarka.herokuapp.com/
 
 ## General info
 This project is a simple chat application made for educational purposes.
